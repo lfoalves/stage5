@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #222;
+    width: 100%;
+    height: 100%;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    background-color: #cecece;
+}
+
+.main {
+    padding: 5rem;
+    display: grid;
+    grid: auto / 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: rgb(45, 5, 85);
+    max-width: 136.6rem;
+    height: 100%;
+}
+
+.card {
+    transform-style: preserve-3d;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform .5s;
+    position: relative;
+}
+
+.card:hover .back {
+    /* background-color: #b3b3b3; */
+    /* background-color: #dfdede; */
+    filter: brightness(1.05);
+}
+
+.card:hover .front {
+    /* background-color: rgb(13, 158, 216); */
+    /* background-color: rgb(15, 181, 247); */
+    filter: brightness(1.05);
+}
+
+.face {
+    width: 150px;
+    height: 150px;
+    /* background-color: aqua; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    border: 1px solid rgb(2, 5, 48);
+    color: aliceblue;
+
+    position: absolute;
+}
+
+/* .face:hover {
+    outline: 2px dashed red;
+} */
+
+.front {
+    background-color: rgb(13, 169, 231);
+    transform: rotateY(180deg);
+}
+
+.back {
+    background-color: rgb(2, 5, 48);
+    backface-visibility: hidden;
+    /* background: #999 url('https://img.icons8.com/emoji/344/wrapped-gift.png') no-repeat center; */
+    background: #cecece url('https://img.icons8.com/emoji/344/nazar-amulet.png') no-repeat center;
+    background-size: 60%;
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.front img, .back img {
+    width: 80%;
+}

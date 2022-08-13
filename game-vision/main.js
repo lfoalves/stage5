@@ -12,14 +12,6 @@ const paragraphMessageDefault =  'Adivinhe o número de 0 a 10';
 //Events
 btnTry.addEventListener('click', handleTryClick)
 btnReset.addEventListener('click', handleResetClick)
-document.addEventListener('keydown', function(event) {
-  console.log(event.key)
-  if ((event.key === 'Enter') && (screen1.classList.contains('hide'))) {
-    console.log('Tecla ENTER')
-    handleResetClick()
-  }
-
-})
 
 // Functions =>
 // callback

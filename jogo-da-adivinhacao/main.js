@@ -1,5 +1,5 @@
 // Variables
-const ramdomNumber = Math.round(Math.random() * 10);
+let ramdomNumber = Math.round(Math.random() * 10);
 const screen1 = document.querySelector('.screen1');
 const screen2 = document.querySelector('.screen2');
 const paragraph = screen1.querySelector('p');
@@ -13,12 +13,9 @@ const paragraphMessageDefault =  'Adivinhe o número de 0 a 10';
 btnTry.addEventListener('click', handleTryClick)
 btnReset.addEventListener('click', handleResetClick)
 document.addEventListener('keydown', function(event) {
-  console.log(event.key)
   if ((event.key === 'Enter') && (screen1.classList.contains('hide'))) {
-    console.log('Tecla ENTER')
-    handleResetClick()
+    handleResetClick();
   }
-
 })
 
 // Functions =>
@@ -56,6 +53,7 @@ function handleTryClick(event) {
 //function reset
 function handleResetClick() {
   toggleScreen();
+  ramdomNumber = Math.round(Math.random() * 10);
   xAttempts = 1;
   paragraph.innerText = paragraphMessageDefault;
 }

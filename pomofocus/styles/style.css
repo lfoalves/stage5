@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #121214;
+
+  --base-color: 194;
+  --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+  --primary-color: hsl(var(--base-color), 100%, 63%);
+  --text-color: #FFFFFF;
+  --font-roboto: 'Roboto', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-roboto);
+
+  display: grid;
+}
+
+main {
+  align-self: end;
+  justify-self: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.play:disabled {
+  background-color: rgb(146, 7, 7);
+  clip-path: circle();
+  cursor: no-drop;
+}
+
+.hide {
+  display: none;
+}
+
+.play img path, .pause img path, .sound-on img path {
+  fill: var(--primary-color);
+}
+
+button img {
+  width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+
+.timer {
+  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+  display: flex;
+
+  margin-bottom: 1.6rem;
+}
+
+.controls {
+  background-color: var(--bg-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+
+  width: clamp(10rem, 10rem + 30vw, 22.8rem);
+  height: clamp(8rem, 5rem + 10vw, 10.8rem);
+
+  border-radius: 9999px;
+}
+
+footer {
+  align-self: end;
+  justify-self: end;
+  
+  padding: 0 4rem 3.2rem 0;
+}

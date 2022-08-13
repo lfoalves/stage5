@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-bg-color: #dce4e3;
+  --green: #18c29c;
+  --light-green: #8ed7c6;
+  --light-grey: #dce4e3;
+  --text-color: #084236;
+
+  --font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+
+  font-family: var(--font-family);
+}
+
+body {
+  display: flex;
+}
+
+/* Sidebar */
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--green);
+  width: 25rem;
+  height: 100vh;
+
+  transition: all .3s;
+}
+
+div.icons {
+  display: grid;
+  width: 22.2rem;
+  background-color: none;
+
+  padding: 1rem 1.4rem;
+
+  transition: all .3s;
+}
+
+.icons i {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  padding: 1.3rem;
+  font-style: normal;
+  font-size: 1.6rem;
+  border-radius: 1.2rem;
+}
+
+.icons i:hover {
+  background-color: var(--light-green);
+}
+
+/* Ícone do Menu */
+.icons i.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 0;
+}
+
+.icons i.menu img.menu:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+/* _-_-_-_-_ Log-out _-_-_-_-_ */
+#sidebar .log-out {
+  padding: .7rem 1.4rem;
+  background-color: var(--light-green);
+
+  transition: all .3s;
+}
+
+#sidebar .log-out i {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+#avatar-nome {
+  display: flex;
+  gap: .5rem;
+}
+
+#sidebar .log-out i span,
+sub {
+  font-size: 1.5rem;
+  font-style: normal;
+  color: var(--text-color);
+}
+
+sub {
+  font-size: 1.2rem;
+}
+
+#sidebar .log-out i img:nth-child(2) {
+  width: 2.4rem;
+}
+
+#sidebar .log-out img {
+  width: 4.5rem;
+}
+
+.logoff {
+  cursor: pointer;
+}
+
+/* _-_-_-_-_ Main _-_-_-_-_ */
+main {
+  background-color: var(--light-grey);
+  height: 100vh;
+  width: 100%;
+  padding: 1.8rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* Sidebar Close Display None Bottão Menu Close ativo ---------------- */
+#sidebar.close {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--green);
+  width: 7.8rem;
+  height: 100vh;
+
+  transition: all .3s;
+}
+
+.icons.display span {
+  display: none;
+
+  transition: all .3s;
+}
+
+.icons.display i {
+  width: 5.0rem;
+  height: 5.0rem;
+  padding: 1.3rem;
+
+  transition: all .3s;
+}
+
+.log-out.none div {
+  display: none;
+
+  transition: all .3s;
+}
+
+.log-out.none div#avatar-nome {
+  display: none;
+
+  transition: all .3s;
+}
+
+.log-out.none img.avatar {
+  display: none;
+
+  transition: all .3s;
+}
+
+.log-out.none i {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto;
+
+  transition: all .3s;
+}
+
+.log-out.none img {
+  margin: 0 auto;
+
+  transition: all .3s;
+}
