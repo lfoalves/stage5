@@ -120,6 +120,10 @@ ul li:nth-child(4) a {
   background-image: url('./assets/jogo-da-adivinhacao.png');
   background-position: center center;
 }
+ul li:nth-child(5) a {
+  background-image: url('./assets//focus-timer-2.png');
+  background-position: 50% 50%;
+}
 
 ul li p {
   font-size: 2rem;
