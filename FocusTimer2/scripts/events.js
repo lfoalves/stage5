@@ -15,6 +15,7 @@ export default function Events({
   });
   
   buttonStop.addEventListener('click', () => {
+    sound.pressButton();
     updateTimerDisplay(0, 0);
   });
   

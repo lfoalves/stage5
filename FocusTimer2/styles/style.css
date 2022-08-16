@@ -72,6 +72,7 @@ main {
   fill: #000;
 }
 
+
 body.dark {
   background-color: #121214;
 }
@@ -90,7 +91,7 @@ body.dark .sounds button {
 body.dark .sounds button svg path {
   fill: #C4C4CC;
 }
-body.dark .sounds button:hover, body.dark.sounds button:focus {
+body.dark .sounds button:hover, body.dark .sounds button:focus {
   background-color: #0A3442;
 }
 body.dark .sounds button.active svg path {
