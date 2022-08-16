@@ -74,17 +74,17 @@ export default function Events({
 
 
 
+  buttonDarkTheme.addEventListener('click', () => {
+    console.log('Dark Theme')
+    buttonLightTheme.classList.remove('hide');
+    buttonDarkTheme.classList.add('hide');
+    document.body.classList.add('dark')
+  });
   buttonLightTheme.addEventListener('click', () => {
     console.log('Light Theme');
     buttonLightTheme.classList.add('hide');
     buttonDarkTheme.classList.remove('hide');
-    document.body.classList.add('dark')
-  });
-  buttonDarkTheme.addEventListener('click', () => {
-    console.log('Darjk Them')
-    buttonLightTheme.classList.remove('hide');
-    buttonDarkTheme.classList.add('hide');
     document.body.classList.remove('dark')
-  })
+  });
   
 }
