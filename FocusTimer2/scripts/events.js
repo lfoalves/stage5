@@ -75,13 +75,13 @@ export default function Events({
 
 
   buttonDarkTheme.addEventListener('click', () => {
-    console.log('Dark Theme')
+    sound.pressButton();
     buttonLightTheme.classList.remove('hide');
     buttonDarkTheme.classList.add('hide');
     document.body.classList.add('dark')
   });
   buttonLightTheme.addEventListener('click', () => {
-    console.log('Light Theme');
+    sound.pressButton();
     buttonLightTheme.classList.add('hide');
     buttonDarkTheme.classList.remove('hide');
     document.body.classList.remove('dark')

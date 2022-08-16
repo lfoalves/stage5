@@ -14,7 +14,6 @@ export default function Timer({
       let minutes = Number(minutesDisplay.textContent);
   
       if (minutes <= 0 && seconds <= 0) {
-        console.log(minutes, seconds)
         Sounds().timerEnd();
         return;
       }

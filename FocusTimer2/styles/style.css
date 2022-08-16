@@ -166,9 +166,14 @@ body.dark .controls button:hover svg path {
   box-shadow: 0.2rem 0.2rem 0.5rem rgba(100, 100, 100, 0.5);
 }
 
+
+
 @media(max-width: 900px) {
   main {
     grid-template-columns: 1fr;
     gap: 7rem
+  }
+  .theme {
+    margin: 1rem;
   }
 }
