@@ -1,6 +1,7 @@
 export default function Events({
-  resetTimer,
-  countdown, timerTimeOut,
+  buttonLightTheme, buttonDarkTheme,
+  updateTimerDisplay,
+  countdown,
   minutesDisplay,
   buttonPlay, buttonStop, buttonPlus, buttonLow,
   buttonFlorest, buttonStorm, buttonCoffee, buttonFire, sound
@@ -14,9 +15,7 @@ export default function Events({
   });
   
   buttonStop.addEventListener('click', () => {
-    sound.pressButton();
-    clearTimeout(timerTimeOut);
-    resetTimer();
+    updateTimerDisplay(0, 0);
   });
   
   buttonPlus.addEventListener('click', () => {
@@ -30,10 +29,11 @@ export default function Events({
   
   buttonLow.addEventListener('click', () => {
     sound.pressButton();
-    if (minutesDisplay.textContent <= 0) {
+    minutes = Number(minutesDisplay.textContent);
+    if (minutes <= 0) {
+      clearTimeout(timerTimeOut);
       return;
     }
-    minutes = Number(minutesDisplay.textContent);
     minutesDisplay.textContent = String(minutes - 5).padStart(2, '0');
   });
 
@@ -70,6 +70,21 @@ export default function Events({
     buttonFlorest.classList.remove('active');
     buttonStorm.classList.remove('active');
     buttonCoffee.classList.remove('active');
+  });
+
+
+
+  buttonLightTheme.addEventListener('click', () => {
+    console.log('Light Theme');
+    buttonLightTheme.classList.add('hide');
+    buttonDarkTheme.classList.remove('hide');
+    document.body.classList.add('dark')
+  });
+  buttonDarkTheme.addEventListener('click', () => {
+    console.log('Darjk Them')
+    buttonLightTheme.classList.remove('hide');
+    buttonDarkTheme.classList.add('hide');
+    document.body.classList.remove('dark')
   })
   
 }

@@ -47,6 +47,62 @@ main {
 }
 
 
+.hide {
+  display: none;
+}
+
+
+
+.theme {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5rem;
+
+  width: 5rem;
+  height: 5rem;
+
+  cursor: pointer;
+  background-color: transparent;
+
+  display: grid;
+  place-items: center;
+}
+.theme svg path {
+  fill: #000;
+}
+
+body.dark {
+  background-color: #121214;
+}
+body.dark .theme svg:nth-child(2) path {
+  fill: #FFF;
+}
+body.dark .display span {
+  color: #FFF;
+}
+body.dark .timer .controls svg path {
+  fill: #C4C4CC;
+}
+body.dark .sounds button {
+  background-color: #29292E;
+}
+body.dark .sounds button svg path {
+  fill: #C4C4CC;
+}
+body.dark .sounds button:hover, body.dark.sounds button:focus {
+  background-color: #02799D;
+}
+body.dark .sounds button.active svg path {
+  fill: #FFFFFF;
+}
+body.dark .sounds button.active {
+  background-color: #02799D;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(100, 100, 100, 0.5);
+}
+
+
+
 .timer .display span {
   font-size: 12.6rem;
   font-weight: 500;
