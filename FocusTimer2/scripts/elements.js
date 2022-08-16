@@ -11,8 +11,8 @@ const buttonStorm = document.querySelector('.sounds button:nth-child(2)');
 const buttonCoffee = document.querySelector('.sounds button:nth-child(3)');
 const buttonFire = document.querySelector('.sounds button:nth-child(4)');
 
-const buttonDarkTheme = document.querySelector('.theme svg:nth-child(1)');
-const buttonLightTheme = document.querySelector('.theme svg:nth-child(2)');
+const buttonLightTheme = document.querySelector('.theme svg:nth-child(1)');
+const buttonDarkTheme = document.querySelector('.theme svg:nth-child(2)');
 
 export {
   minutesDisplay,

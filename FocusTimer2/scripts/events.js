@@ -75,16 +75,16 @@ export default function Events({
 
 
 
-  buttonDarkTheme.addEventListener('click', () => {
-    sound.pressButton();
-    buttonLightTheme.classList.remove('hide');
-    buttonDarkTheme.classList.add('hide');
-    document.body.classList.add('dark')
-  });
   buttonLightTheme.addEventListener('click', () => {
     sound.pressButton();
     buttonLightTheme.classList.add('hide');
     buttonDarkTheme.classList.remove('hide');
+    document.body.classList.add('dark')
+  });
+  buttonDarkTheme.addEventListener('click', () => {
+    sound.pressButton();
+    buttonLightTheme.classList.remove('hide');
+    buttonDarkTheme.classList.add('hide');
     document.body.classList.remove('dark')
   });
   
