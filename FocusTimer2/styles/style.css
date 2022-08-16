@@ -91,13 +91,13 @@ body.dark .sounds button svg path {
   fill: #C4C4CC;
 }
 body.dark .sounds button:hover, body.dark.sounds button:focus {
-  background-color: #02799D;
+  background-color: #0A3442;
 }
 body.dark .sounds button.active svg path {
   fill: #FFFFFF;
 }
 body.dark .sounds button.active {
-  background-color: #02799D;
+  background-color: #0A3442;
   box-shadow: 0.2rem 0.2rem 0.5rem rgba(100, 100, 100, 0.5);
 }
 
