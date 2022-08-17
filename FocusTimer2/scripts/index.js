@@ -1,17 +1,26 @@
 import {
   minutesDisplay,
   secondsDisplay,
+
   buttonPlay,
   buttonStop,
   buttonPlus,
   buttonLow,
+
   buttonFlorest,
   buttonStorm,
   buttonCoffee,
   buttonFire,
+  
   buttonLightTheme,
-  buttonDarkTheme
+  buttonDarkTheme,
+
+  inputRangeFlorest,
+  inputRangeStorm,
+  inputRangeCoffee,
+  inputRangeFire
 } from './elements.js';
+
 import Sounds from "./sounds.js";
 import Events from './events.js';
 import Timer from './timer.js';
@@ -24,6 +33,11 @@ const timer = Timer({
 });
 
 Events({
+  inputRangeFlorest,
+  inputRangeStorm,
+  inputRangeCoffee,
+  inputRangeFire,
+
   buttonLightTheme, buttonDarkTheme,
    
   updateTimerDisplay: timer.updateTimerDisplay,

@@ -14,17 +14,30 @@ const buttonFire = document.querySelector('.sounds button:nth-child(4)');
 const buttonLightTheme = document.querySelector('.theme svg:nth-child(1)');
 const buttonDarkTheme = document.querySelector('.theme svg:nth-child(2)');
 
+const inputRangeFlorest = document.querySelector('.sounds button:nth-child(1) input');
+const inputRangeStorm = document.querySelector('.sounds button:nth-child(2) input');
+const inputRangeCoffee = document.querySelector('.sounds button:nth-child(3) input');
+const inputRangeFire = document.querySelector('.sounds button:nth-child(4) input');
+
 export {
   minutesDisplay,
   secondsDisplay,
+
   buttonPlay,
   buttonStop,
   buttonPlus,
   buttonLow,
+
   buttonFlorest,
   buttonStorm,
   buttonCoffee,
   buttonFire,
+  
   buttonLightTheme,
-  buttonDarkTheme
+  buttonDarkTheme,
+
+  inputRangeFlorest,
+  inputRangeStorm,
+  inputRangeCoffee,
+  inputRangeFire
 }

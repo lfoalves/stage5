@@ -47,6 +47,7 @@ main {
 }
 
 
+
 .hide {
   display: none;
 }
@@ -72,7 +73,6 @@ main {
   fill: #000;
 }
 
-
 body.dark {
   background-color: #121214;
 }
@@ -91,8 +91,8 @@ body.dark .sounds button {
 body.dark .sounds button svg path {
   fill: #C4C4CC;
 }
-body.dark .sounds button:hover, body.dark .sounds button:focus {
-  background-color: #0A3442;
+body.dark .sounds button:hover {
+  box-shadow: 0 0 0.5rem #0A3442;
 }
 body.dark .sounds button.active svg path {
   fill: #FFFFFF;
@@ -105,6 +105,40 @@ body.dark .controls button:hover svg path {
   fill: #e3e3e6;
 }
 
+body.dark input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 9rem;
+  height: 0.4rem;
+  border-radius: 0.5rem;
+  background-color: #C4C4CC;
+  outline: none;
+}
+body.dark input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #C4C4CC;
+}
+body.dark input[type=range]::-moz-range-thumb {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #C4C4CC;
+  border: none;
+}
+body.dark input[type=range]::-ms-range-thumb {
+  width: 25px;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #C4C4CC;
+  border: none;
+}
+
 
 
 .timer .display span {
@@ -112,6 +146,7 @@ body.dark .controls button:hover svg path {
   font-weight: 500;
   color: #323238;
 }
+
 
 
 .controls {
@@ -146,17 +181,57 @@ body.dark .controls button:hover svg path {
 
   cursor: pointer;
 
-  transition: background .3s;
+  transition: all .3s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.8rem;
 }
 .sounds button svg path {
   fill: #323238;
 }
-.sounds button:hover svg path, .sounds button:focus svg path {
-  fill: #FFFFFF;
+.sounds button:hover {
+  box-shadow: 0 0 0.5rem rgba(2, 121, 157, 0.5);
 }
-.sounds button:hover, .sounds button:focus {
-  background-color: #02799D;
+
+
+
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 9rem;
+  height: 0.4rem;
+  border-radius: 0.5rem;
+  background-color: #323238;
+  outline: none;
 }
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #323238;
+}
+input[type=range]::-moz-range-thumb {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #323238;
+  border: none;
+}
+input[type=range]::-ms-range-thumb {
+  width: 25px;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #323238;
+  border: none;
+}
+
 
 
 .sounds button.active svg path {
@@ -165,6 +240,39 @@ body.dark .controls button:hover svg path {
 .sounds button.active {
   background-color: #02799D;
   box-shadow: 0.2rem 0.2rem 0.5rem rgba(100, 100, 100, 0.5);
+}
+.sounds button.active input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 9rem;
+  height: 0.4rem;
+  border-radius: 0.5rem;
+  background-color: #FFF;
+  outline: none;
+}
+.sounds button.active input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #FFF;
+}
+.sounds button.active input[type=range]::-moz-range-thumb {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #FFF;
+  border: none;
+}
+.sounds button.active input[type=range]::-ms-range-thumb {
+  width: 25px;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #FFF;
+  border: none;
 }
 
 

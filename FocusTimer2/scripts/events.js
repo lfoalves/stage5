@@ -1,10 +1,17 @@
 export default function Events({
+  inputRangeFlorest,
+  inputRangeStorm,
+  inputRangeCoffee,
+  inputRangeFire,
+
   buttonLightTheme, buttonDarkTheme,
   updateTimerDisplay,
   countdown,
   minutesDisplay,
   buttonPlay, buttonStop, buttonPlus, buttonLow,
-  buttonFlorest, buttonStorm, buttonCoffee, buttonFire, sound
+  buttonFlorest, buttonStorm, buttonCoffee, buttonFire,
+
+  sound
 }) {
 
   let minutes;
@@ -41,8 +48,12 @@ export default function Events({
 
 
   buttonFlorest.addEventListener('click', () => {
+    if (buttonFlorest.classList.contains('active')) {
+      sound.notSound();
+      buttonFlorest.classList.remove('active')
+      return
+    }
     sound.florestSound();
-
     buttonFlorest.classList.add('active');
     buttonStorm.classList.remove('active');
     buttonCoffee.classList.remove('active');
@@ -50,6 +61,11 @@ export default function Events({
   });
   
   buttonStorm.addEventListener('click', () => {
+    if (buttonStorm.classList.contains('active')) {
+      sound.notSound();
+      buttonStorm.classList.remove('active')
+      return
+    }
     sound.stormSound();
     buttonStorm.classList.add('active');
     buttonFlorest.classList.remove('active');
@@ -58,6 +74,11 @@ export default function Events({
   });
 
   buttonCoffee.addEventListener('click', () => {
+    if (buttonCoffee.classList.contains('active')) {
+      sound.notSound();
+      buttonCoffee.classList.remove('active')
+      return
+    }
     sound.coffeeSound();
     buttonCoffee.classList.add('active');
     buttonFlorest.classList.remove('active');
@@ -66,6 +87,11 @@ export default function Events({
   });
 
   buttonFire.addEventListener('click', () => {
+    if (buttonFire.classList.contains('active')) {
+      sound.notSound();
+      buttonFire.classList.remove('active')
+      return
+    }
     sound.fireSound();
     buttonFire.classList.add('active');
     buttonFlorest.classList.remove('active');
@@ -74,7 +100,7 @@ export default function Events({
   });
 
 
-
+  // THEME
   buttonLightTheme.addEventListener('click', () => {
     sound.pressButton();
     buttonLightTheme.classList.add('hide');
@@ -87,5 +113,19 @@ export default function Events({
     buttonDarkTheme.classList.add('hide');
     document.body.classList.remove('dark')
   });
-  
+
+
+  // Range
+  inputRangeFlorest.addEventListener('input', () => {
+    sound.florestVolume(inputRangeFlorest.value);
+  });
+  inputRangeStorm.addEventListener('input', () => {
+    sound.stormVolume(inputRangeStorm.value);
+  });
+  inputRangeCoffee.addEventListener('input', () => {
+    sound.coffeeVolume(inputRangeCoffee.value);
+  });
+  inputRangeFire.addEventListener('input', () => {
+    sound.fireVolume(inputRangeFire.value);
+  });
 }

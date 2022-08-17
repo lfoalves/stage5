@@ -21,6 +21,23 @@ export default function Sounds() {
     kitchenTimer.play();
   }
 
+
+  // Controles para volume
+  function florestVolume(volume) {
+    soundFlorest.volume = volume / 100;
+  }
+  function stormVolume(volume) {
+    soundStorm.volume = volume / 100;
+  }
+  function coffeeVolume(volume) {
+    soundCoffee.volume = volume / 100;
+  }
+  function fireVolume(volume) {
+    soundFire.volume = volume / 100;
+  }
+
+
+
   function florestSound() {
     soundFlorest.play();
     soundStorm.pause();
@@ -49,7 +66,21 @@ export default function Sounds() {
     soundCoffee.pause();
   }
 
+  function notSound() {
+    soundFlorest.pause();
+    soundStorm.pause();
+    soundCoffee.pause();
+    soundFire.pause();
+  }
+  
+
   return {
-    pressButton, timerEnd, florestSound, stormSound, coffeeSound, fireSound
+    pressButton, timerEnd, florestSound, stormSound, coffeeSound, fireSound,
+    notSound,
+    
+    florestVolume,
+    stormVolume,
+    coffeeVolume,
+    fireVolume
   }
 }
